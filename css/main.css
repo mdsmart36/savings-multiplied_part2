@@ -1,0 +1,210 @@
+/** {
+	border: 1px solid black;
+}
+*/
+p {
+  font-family: 'Corben', cursive;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* ----- CLASSES -----*/
+
+.navbar {
+	border: none;
+}
+
+.link-list {
+	text-align: center;
+	padding: 0px;
+}
+
+.link-list-right {
+	float: right;
+}
+
+.link-list > li {
+	display: inline;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: white;
+}
+
+.link-list > img {
+	display: inline;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.logo {
+	position: absolute;
+	height: 100px;
+}
+
+.tag-line {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.pillbox {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+  border-radius: 30px;
+}
+
+/* ----- DIVs -----*/
+
+.outer-top {
+	position: relative;
+}
+
+.inner-top {
+	position: absolute;
+	bottom: 0px;
+	left: 100px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.outer-bottom {
+	position: relative;
+}
+
+.inner-bottom-1 {
+	position: absolute;
+	top: 0px;
+	left: 100px;
+}
+
+.inner-bottom-1-left {
+	padding: 0px;
+	
+	float: left;
+	
+}
+
+.inner-bottom-1-right {
+	float: right;
+	padding: 0px;
+	
+	
+}
+
+.inner-bottom-2 {
+	position: absolute;
+	top: 500px;
+	left: 100px;
+	border-radius: 0px 0px 10px 10px;
+	display: inline-block;
+}
+
+.inner-bottom-3 {
+	position: absolute;
+	top: 600px;
+	left: 100px;
+}
+
+/* ----- Row Height ----- */
+
+.rh50 {
+	height: 50px;
+}
+
+.rh60 {
+	height: 60px;
+}
+
+.rh100 {
+	height: 100px;
+}
+
+.rh150 {
+	height: 150px;
+}
+
+.rh500 {
+	height: 500px;
+}
+
+.rh600 {
+	height: 600px;
+}
+
+.rh660 {
+	height: 660px;
+}
+
+/* ----- Colors ----- */
+
+.white {
+	background-color: white;
+}
+.dark-teal {
+	background-color: #69C4CC;
+}
+
+.light-teal {
+	background-color: #CFEFEE;
+}
+
+.light-blue-text {
+	color: #D5F1F0;
+}
+
+.med-blue-text {
+	color: #2A959E;
+}
+
+.bright-pink {
+	background-color: #E9168C;
+}
+
+.light-pink {
+	background-color: #F3CECD;
+}
+
+.bright-purple {
+	background-color: #6F308B;
+}
+
+.dark-purple {
+	background-color: #6F1549;
+}
+
+.green-form-auction {
+background-color: #edf9d3;
+}
+
+.green-text-auction {
+	color: #8db639;
+}
+
+.baby-blue {
+  background: #69C4CC;
+}
+
+.green {
+  background: green;
+}
+
+.purple {
+  background: purple;
+}
+
+.pink {
+  background: #f89faf;
+}
+.pad-5 {
+	padding-bottom: 5px;
+}
