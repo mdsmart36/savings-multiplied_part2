@@ -8,7 +8,6 @@ p, a, .pillbox {
   font-size: 16px;
 }
 
-/* ----- ID'S ----- */
 
 /* ----- CLASSES -----*/
 
@@ -69,62 +68,11 @@ p, a, .pillbox {
 
 /* ----- DIVs -----*/
 
-.outer-top {
-	position: relative;
-}
-
 .inner-top {
-	position: absolute;
-	bottom: 0px;
-	left: 100px;
 	border-radius: 10px 10px 0px 0px;
+	margin-top: 40px;
 }
 
-.outer-bottom {
-	position: relative;
-}
-
-.inner-bottom-1 {
-	position: absolute;
-	top: 0px;
-	left: 100px;
-}
-
-.inner-bottom-1-left {
-	padding: 0px;
-	
-	float: left;
-	
-}
-
-.inner-bottom-1-right {
-	float: right;
-	padding: 0px;	
-}
-
-.inner-bottom-2 {
-	/*position: absolute;*/
-	/*top: 500px;*/
-	position: relative;
-	left: 100px;
-	border-radius: 0px 0px 10px 10px;
-	display: inline-block;
-}
-
-.inner-bottom-3 {
-	/*position: absolute;*/
-	/*top: 600px;*/
-	position: relative;
-	left: 100px;
-}
-
-/* ----- Media Queries ----- */
-
-@media (max-width: 960px) {
-	.rh660 {
-		min-height: 1000px;
-	}
-}
 
 /* ----- Row Height ----- */
 
