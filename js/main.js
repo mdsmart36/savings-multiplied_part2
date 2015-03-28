@@ -10,9 +10,10 @@ you should have an auction page with items getting loaded in from the API.
 
 $(document).ready(function() {
 	var $itemDiv = $('#auction-items');
+	
 
 	function getAuctionItems() {
-		$.get("http://savingsmultipliedssh.firebaseio.com/items.json",
+		$.get("http://sweltering-inferno-5214.firebaseio.com/.json",
 			function(data) {
 				/* data is an array of objects with the following properties:
 					 {
@@ -24,6 +25,8 @@ $(document).ready(function() {
 					 }
 				*/
 
+				
+
 				for (var i = 0; i < data.length; i++) {
 					var imageURL = data[i].image;
 					var title = data[i].title;
@@ -33,20 +36,30 @@ $(document).ready(function() {
 					var month = endDate.getMonth() + 1;
 					var day = endDate.getDate();
 					var year = endDate.getFullYear();
-					// var time = Date.parse(data[i].endDate).getFullYear();
+					var $minPrice = $('#js-minPrice').val();
+					var $maxPrice = $('#js-maxPrice').val();
 
-					var contentString = "";
-					contentString += "<figure>";
-					contentString += "<img class=\"thumb\" src=\"" + imageURL + "\" alt=\"\">";
-					contentString += "<figcaption>" + title + " $" + price.toFixed(2) + "</figcaption>"
-					contentString += "<figcaption>" + seller + " " + month + "-" + day + "-" + year + "</figcaption>"
-					contentString += "</figure>"
-					$itemDiv.before(contentString);
-					// console.log(i);
+					console.log($minPrice);
+					console.log($maxPrice);
+					
+					if (price >= $minPrice && price <= $maxPrice) {
+						var contentString = "";
+						contentString += "<figure class='filteredItems'>";
+						contentString += "<img class=\"thumb\" src=\"" + imageURL + "\" alt=\"\">";
+						contentString += "<figcaption>" + title + " $" + price.toFixed(2) + "</figcaption>"
+						contentString += "<figcaption>" + seller + " " + month + "-" + day + "-" + year + "</figcaption>"
+						contentString += "</figure>"
+						$itemDiv.before(contentString);
+					}
+					
 				}
-				// console.log("here");
+				
 			});
 		}
+
+$('#seeItems').on('click', function() {
+		$('.filteredItems').remove();
 		getAuctionItems();
+	});
 		
 });

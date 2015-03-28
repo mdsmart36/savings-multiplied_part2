@@ -33,7 +33,12 @@ figcaption {
 }
 
 
-/* ----- ID'S ----- */
+#overlay {
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 
 /* ----- CLASSES -----*/
 
@@ -100,60 +105,9 @@ figcaption {
 
 /* ----- DIVs -----*/
 
-.outer-top {
-	position: relative;
-}
-
 .inner-top {
-	position: absolute;
-	bottom: 0px;
-	left: 100px;
 	border-radius: 10px 10px 0px 0px;
-}
-
-.outer-bottom {
-	position: relative;
-}
-
-.inner-bottom-1 {
-	position: absolute;
-	top: 0px;
-	left: 100px;
-}
-
-.inner-bottom-1-left {
-	padding: 0px;
-	float: left;
-	padding: 20px;
-	border-radius: 20px;	
-}
-
-.inner-bottom-1-right {
-	float: right;
-	padding: 0px;	
-}
-
-.inner-bottom-2 {
-	position: absolute;
-	top: 500px;
-	left: 100px;
-	border-radius: 0px 0px 10px 10px;
-	display: inline-block;
-}
-
-.inner-bottom-3 {
-	/*position: absolute;*/
-	/*top: 800px;*/
-	position: relative;
-	left: 100px;
-}
-
-/* ----- Media Queries ----- */
-
-@media (max-width: 960px) {
-	.rh660 {
-		min-height: 1000px;
-	}
+	margin-top: 40px;
 }
 
 /* ----- Row Height ----- */
@@ -180,7 +134,6 @@ figcaption {
 
 .rh1000 {
 	min-height: 1000px;
-	height: auto;
 }
 
 /* ----- Colors ----- */

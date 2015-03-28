@@ -17,21 +17,20 @@
 	<div class="container">
 		
 		<!-- TOP SECTION OF PAGE -->
-		<div class="row">
-       <div class="col-md-12 rh150 light-teal outer-top"> <!-- rh150 -->
-          <div class="col-md-10 rh100 white inner-top"> <!-- rh100 -->
-            
+       <div class="col-md-12 rh150 light-teal"> <!-- rh150 -->
+		      <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10 rh100 white inner-top"> <!-- rh100 -->            
               <ul class="link-list link-list-right pad-top-20"> 
                 <li class="pillbox baby-blue">About</li>
                 <li class="pillbox green">Contact</li>
                 <li class="pillbox purple">Blog</li>
                 <li class="pillbox pink">Press</li>
-              </ul>  
-
-            
+              </ul>              
        			<img class="img-responsive logo" src="../images/savings-multiplied-logo.png" alt="logo">
        			<img class="img-responsive tag-line" src="../images/tagline.png" alt="tagline">
        		</div>
+          <div class="col-md-1"></div>
        </div>
     </div>
 
@@ -42,17 +41,7 @@
 
        	<nav class="navbar navbar-default">
        	  <div class="light-pink">
-       	    
-            <!-- Brand and toggle get grouped for better mobile display -->
-       	    <div class="navbar-header">
-       	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-       	        <span class="sr-only">Toggle navigation</span>
-       	        <span class="icon-bar"></span>
-       	        <span class="icon-bar"></span>
-       	        <span class="icon-bar"></span>
-       	      </button>
        	      
-       	    </div>
 
        	    <!-- Collect the nav links, forms, and other content for toggling -->
        	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -72,8 +61,8 @@
        	        <button type="submit" class="btn btn-default">Submit</button>
        	      </form>
        	      
-       	    </div><!-- /.navbar-collapse -->
-       	  </div> <!--/.container-fluid -->
+       	    </div>
+       	  </div>
        	</nav>
        </div>
     </div>
@@ -81,11 +70,12 @@
 		
 		<!-- BOTTOM SECTION OF PAGE -->
   
-    <div class="row">
-       <div class="col-md-12 dark-teal rh1000 outer-bottom"> <!-- rh1000 -->
-       		<div class="col-md-10 white rh800 inner-bottom-1"> <!-- rh800 -->
+       <div class="col-md-12 dark-teal rh1000"> <!-- rh1000 -->
+          <div class="row">
+          <div class="col-md-1"></div>
+       		<div class="col-md-10 white rh800"> <!-- rh800 -->
        			
-            <div class="col-md-4 rh800 inner-bottom-1-left green-form-auction green-text-auction">
+            <div class="col-md-4 rh800 green-form-auction green-text-auction">
        				    <div class="">
                     <div class="">
                     <form action="#" method="POST">
@@ -140,7 +130,7 @@
                   </div>
        			</div>
             
-            <div class="col-md-8 rh800 inner-bottom-1-right">
+            <div class="col-md-8 rh800">
               <p>All > Twin > B/G</p>
               <label for="feedback-type">Sort by:</label>
                 <select id="feedback-2" name="type">
@@ -148,9 +138,21 @@
                   <option>Size</option>
                   <option>something else</option>
                 </select>
-                <button type="submit">V</button>
+                <button type="submit" id="seeItems">V</button>
                 prev | page num | next | view all
                 <br>
+
+                <div class="slider">
+                  <label for="minPrice">Minimum Price</label>
+                  <input type="range" min=0 max=500 value=25 id="minPrice" step=10 oninput="nss.outputUpdate(value, id)">
+                  <output for="minPrice" id="js-minPrice">25</output>
+                </div>
+
+                <div class="slider">
+                  <label for="maxPrice">Maximum Price</label>
+                  <input type="range" min=0 max=500 value=25 id="maxPrice" step=10 oninput="nss.outputUpdate(value, id)">
+                  <output for="maxPrice" id="js-maxPrice">25</output>
+                </div>
                 
                 <!-- This div is used by jQuery to populate the auction page-->
                 <div id="auction-items">                  
@@ -158,8 +160,8 @@
 
             </div>
             
-                  
-          <div class="col-md-10 dark-teal rh60 inner-bottom-3"> <!-- rh60 -->
+          <div class="row">        
+          <div class="col-md-12 dark-teal rh60"> <!-- rh60 -->
             <ul class="link-list pad-top-20">
               <li>Link here</li>
               <li>Link here</li>
@@ -168,8 +170,10 @@
               <li>Link here</li>
             </ul>
           </div>
+          </div>
         
        		</div>
+          <div class="col-md-1"></div>
        </div>
     </div>
   
@@ -177,10 +181,21 @@
   
 	</div>
 
+  
+
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
+
+  <script type="text/javascript">
+    var nss = {};
+    $(document).ready(function() {
+      nss.outputUpdate = function(price, id) {
+        $('#js-' + id).val(price);
+      }
+    })
+  </script>
 
 </body>
 

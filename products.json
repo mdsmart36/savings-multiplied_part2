@@ -1,0 +1,29 @@
+{
+	"products": {
+		"0": {
+			"name": "asparagus",
+			"color": "green",
+			"shape": "stick"
+		},
+		"1": {
+			"name": "hamburger",
+			"color": "brown",
+			"shape": "round"
+		},
+		"2": {
+			"name": "banana",
+			"color": "yellow",
+			"shape": "cylinder"
+		},
+		"3": {
+			"name": "tomato",
+			"color": "red",
+			"shape": "sphere"
+		},
+		"4": {
+			"name": "bread",
+			"color": "white",
+			"shape": "plane"
+		}
+	}
+}
